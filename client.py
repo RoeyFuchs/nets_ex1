@@ -5,5 +5,5 @@ while True:
     msg = input().encode()
     s.sendto(msg, (sys.argv[1], int(sys.argv[2])))
     data, addr = s.recvfrom(1024)
-    print(data.decode(), addr)
+    print(data.decode().split(',')[1])
 s.close()
